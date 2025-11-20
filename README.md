@@ -1,14 +1,14 @@
-# NexGen Logistics - Vehicle Cost-Efficiency Imbalance Predictor (V-CEIP)
+# NexGen Logistics - Vehicle Cost-Efficiency Imbalance Predictor (V-IP)
 
 ## 1. Project Objective & Alignment
 This application addresses NexGen Logistics' critical challenge of **Cost Pressures** and **Operational Inefficiencies** by proactively optimizing fleet assets.
 
 The V-CEIP shifts management from reactive repairs to predictive optimization, supporting the goal of achieving a **15-20% reduction** in operational costs by focusing resources on high-risk vehicles.
 
-## 2. Problem Chosen (Custom Option 8)
+## 2. Problem Chosen - Option 8
 **Title:** Vehicle Cost-Efficiency Imbalance Predictor
 
-**Justification:** The project identifies vehicles that exhibit an imbalance between **high aggregated maintenance costs** and **low utilization** (Usage/Distance). This pinpoint focus targets the most wasteful assets, minimizing cost leakage risk before a major, unscheduled repair occurs.
+**Justification:** The project identifies vehicles that exhibit an imbalance between **high aggregated maintenance costs** and **low utilization**. This pinpoint focus targets the most wasteful assets, minimizing cost leakage risk before a major, unscheduled repair occurs.
 
 ## 3. Solution Stack & Core Metrics
 * **Core Technology:** Python, Streamlit (Interactive Web App)
@@ -16,7 +16,7 @@ The V-CEIP shifts management from reactive repairs to predictive optimization, s
 
 ### Custom Metrics:
 * **Cost Leakage Index (CLI):** A synthetic metric ($\text{Normalized Cost} / (\text{Utilization Rate} + \epsilon)$) used to rank vehicles by risk. A higher CLI indicates a vehicle that is too expensive relative to the distance it contributes.
-* **Risk Flag (ML Bonus):** An anomaly detection model flags vehicles that are statistical outliers based on their CLI, Age, and Utilization, indicating potential system failures.
+* **Risk Flag:** An anomaly detection model flags vehicles that are statistical outliers based on their CLI, Age, and Utilization, indicating potential system failures.
 
 ## 4. Installation and Setup
 1.  **Repository Setup:** Ensure all 7 provided CSV data files are in the same directory as `cost_analyzer.py` and this README.
@@ -36,13 +36,13 @@ The V-CEIP shifts management from reactive repairs to predictive optimization, s
 
 ---
 
-## 📄 Deliverable 2: Innovation Brief (PDF Content - PPT Format)
+## Deliverable 2: Innovation Brief (PDF Format)
 
 This content is designed to be visually impactful and directly address the evaluation criteria, serving as the final presentation document.
 
 ### Slide 1: Title & Mandate
 
-* **Title:** NexGen's Vehicle Cost-Efficiency Imbalance Predictor (V-CEIP)
+* **Title:** NexGen's Vehicle Cost-Efficiency Imbalance Predictor
 * **Role:** Logistics Innovation Analyst
 * **Mandate:** Transform operations from reactive to predictive; reduce operational costs by **15-20%**.
 
@@ -56,7 +56,7 @@ This content is designed to be visually impactful and directly address the evalu
 
 ***
 
-### Slide 3: The Innovative Solution: V-CEIP
+### Slide 3: The Innovative Solution
 
 * **Solution:** A **Streamlit-powered dashboard** that uses a novel metric, the **Cost Leakage Index (CLI)**, to assign a quantified risk score to every vehicle.
 * **Core Logic:** CLI is calculated based on a vehicle's normalized **Total Maintenance Costs** relative to its measured **Utilization Rate ($\text{km}$ driven)**.
@@ -69,7 +69,7 @@ This content is designed to be visually impactful and directly address the evalu
 
 ***
 
-### Slide 4: Data & ML Implementation (Bonus Feature)
+### Slide 4: Data & ML Implementation
 
 * **Data Integration:** Merged data streams (`vehicle_fleet`, `routes_distance`, `cost_breakdown`) using a **simulated transactional key** to link costs/usage to individual Vehicle IDs.
 * **ML Model:** Used **Isolation Forest** (Anomaly Detection) on the multi-dimensional feature space (CLI, Age, Utilization) to automatically flag vehicles that are statistical outliers.
@@ -82,4 +82,4 @@ This content is designed to be visually impactful and directly address the evalu
 
 * **Key Metric Improvement:** Proactive management of the flagged **10% of high-risk vehicles** is estimated to deliver a cost reduction of **18%** in unscheduled downtime and service recovery expenses.
 * **Strategic Shift:** Enables NexGen to move from **reactive asset maintenance** to **predictive resource allocation**.
-* **Call to Action:** Integrate the V-CEIP output into the daily dispatch system to prioritize low-CLI/low-risk vehicles for high-priority or long-distance routes, and flag high-CLI vehicles for scheduled maintenance intervention.
+* **Call to Action:** Integrate the V-IP output into the daily dispatch system to prioritize low-CLI/low-risk vehicles for high-priority or long-distance routes, and flag high-CLI vehicles for scheduled maintenance intervention.
