@@ -7,7 +7,7 @@ from io import BytesIO
 
 st.set_page_config(layout="wide", page_title="NexGen Cost-Efficiency Imbalance Predictor")
 
-st.title("NexGen Cost-Efficiency Imbalance Predictor (V-CEIP)")
+st.title("NexGen Cost-Efficiency Imbalance Predictor (V-IP)")
 st.markdown("Leveraging ML for Proactive Asset Management & Cost Leakage Reduction.")
 
 @st.cache_data
